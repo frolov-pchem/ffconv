@@ -1,0 +1,42 @@
+read rtf card name "TMPRTF"
+read param card flex name "TMPPRM"
+
+stream "TMPSTR"
+
+
+read sequence TMPMOL  1
+generate TMPMOL first none last none setup warn
+
+open read pdb unit 10 card name "TMPPDB"
+read coor pdb unit 10
+close unit 10               
+
+
+!ENERGY - 
+!CUTNB 102.0 CTONNB 100.0 CTOFNB 100.0 -
+!ELEC ATOM CDIELEC TRUNC -
+!VDW VATOM VTRUNC CTVTRN 100.0 -
+!NBXMOD 5
+!NBXMOD 1
+
+ENERGY - 
+CUTNB 999.0 CTONNB 999.0 CTOFNB 999.0 -
+ELEC ATOM CDIELEC TRUNC -
+VDW VATOM VTRUNC CTVTRN 999.0 -
+NBXMOD 5
+
+!print para used card
+
+!open write unit 10 card name ibpr.psf
+!write psf unit 10 card xplor
+!close unit 10
+!open write unit 10 card name ibpr.crd
+!write coor unit 10 card 
+!close unit 10
+!open writ unit 12 card name "ibpr_charmm.rtf"
+!writ rtf unit 12 card
+!close unit 12
+!open writ unit 12 card name "ibpr_charmm.par"
+!writ para unit 12 card
+!close unit 12
+

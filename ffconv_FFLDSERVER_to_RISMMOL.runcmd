@@ -1,0 +1,13 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+# From FFLDSERVER
+Mol = ReadFFLDServerOutput(moltopfn)
+
+# To RISMOL
+Mol.LoadCoordinatesFromPdb(molcoorfn)
+WriteRISMMOLMoleculeTopFile(molname+'.rismmol',Mol)
+
+

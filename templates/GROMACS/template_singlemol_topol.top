@@ -1,0 +1,19 @@
+
+;;; LOAD DEFAULTS
+#include "TMPDEFAULTS" 
+
+;;; LOAD FF *.itp
+#include "TMPFFITP" 
+
+;;; LOAD MOLECULES *.itp
+#include "TMPMOL_AT.itp" 
+
+;;; LOAD MOLECULES *.itp
+#include "TMPMOL.itp" 
+
+[ system ]                             
+; Name                                 
+System: TMPMOL
+
+[ molecules ]
+ TMPMOL  1

@@ -1,0 +1,30 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+### From CHARMM
+# FF
+FF=ReadCharmmForceFieldFile(FFfn)
+FF.GenPairParamFromAtomTypeParam()
+
+# Molecule and extra FF
+Mol,FFextra = ReadCharmmStreamMolecularTopologyFile(moltopfn)
+Mol.GenPairsFromBondConnectivity()
+
+
+### To GROMACS
+# Write geeral FF file
+tmp=FFfn.split('/') ; tmp=tmp[-1] ;
+FFfn=tmp
+WriteGromacsFFFile(FFfn+'.itp',FF,lDef='yes',lBonded='yes')
+
+# Write extra FF file (new parameters in str file)
+WriteGromacsFFFile(molname+'_AT.itp',FFextra,lDef='no',lBonded='yes')
+
+# Write Mol 
+WriteGromacsMoleculeITPFile(molname+'.itp',Mol,Style='Implicit')
+#WriteGromacsMoleculeITPFile(MOLname+'.itp',Mol,Style='Explicit')
+
+
+

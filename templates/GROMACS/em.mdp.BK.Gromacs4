@@ -1,0 +1,26 @@
+
+; Energy minimization (1 step - for energy evaluation only) for a single molecule in vaccuum 
+cpp                 =  /usr/bin/cpp
+integrator          =  steep
+nsteps              =  1
+
+; Energy minimizing stuff
+emtol               =  1
+emstep              =  0.01
+
+; Cutoff
+nstlist             =  1
+rlist               =  5
+rcoulomb            =  5
+coulombtype         =  Cut-off
+vdw_type            =  Switch
+rvdw                =  0.9
+rvdw_switch         =  0.899999999
+
+; Other options
+pbc                 =  no
+constraints         =  none
+Tcoupl              =  no
+Pcoupl              =  no
+gen_vel             =  no
+

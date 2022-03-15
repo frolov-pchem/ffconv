@@ -1,0 +1,44 @@
+// VARIABLE INITIALIZATION
+molecule m, mi;
+residue  tmp_res;
+int   ier;
+float m_xyz[ dynamic ], f_xyz[ dynamic ], v[ dynamic ];
+float dgrad, energy, dummy[2], fret;
+string F, F2;
+matrix new_tr;
+
+// READING IN COORS AND TOPOLGY
+F  = "TMPPDB";
+F2 = "TMPTOP";
+m  = getpdb(F);
+readparm(m,F2);
+allocate m_xyz[ 3*m.natoms ]; allocate f_xyz[ 3*m.natoms ];
+allocate v[ 3*m.natoms ];
+setxyz_from_mol( m, NULL, m_xyz );
+
+// GENERAL OPTIONS
+mm_options("ntpr=1, cut=999.0"); //No solute-solute CUTOFF
+mm_options("verbose=2");
+
+// INITIAL ENERGY EVALUATION
+mme_init( m, NULL, "::ZZZ", dummy, NULL );
+
+// MD
+mm_options("zerov=1, tempi=0.0, dt=0.000000000000000001");
+md( 3*m.natoms, 1, m_xyz, f_xyz, v, mme );
+printf( "Iteration is complete, energy  %8.3f\n", energy );
+//setmol_from_xyz(m, NULL, m_xyz);
+//putpdb( "TMPNAME_nab.pdb", m );
+
+
+
+//fret = mme(m_xyz, f_xyz, 1);
+//printf("Initial energy is  %8.3f\n", fret );
+
+// ENERGY MINIMIZATION
+//dgrad = 0.1;
+//conjgrad(m_xyz, 3*m.natoms, fret, mme, dgrad, 1.0, TMPEMSTEPS );
+//setmol_from_xyz(m, NULL, m_xyz);
+//putpdb("TMPNAME_min.pdb", m );
+//printf("Final energy is  %8.3f\n", fret );
+

@@ -1,0 +1,17 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+# From AMBER
+Mol,FF = ReadAmberTopologyFile(moltopfn)
+FillMasses(Mol)
+
+# To GROMACS
+mol_AT_itp = molname+'_AT.itp'
+WriteGromacsFFFile(mol_AT_itp, FF, lBonded='no', lDef='yes')
+
+mol_itp = molname+'.itp'
+WriteGromacsMoleculeITPFile(mol_itp, Mol, Style='Explicit')
+
+

@@ -1,0 +1,133 @@
+mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  1 2 3 4 5 6 7 8 9 10 11 12 
+mmlewis warning: Now attempting to fix the lewis structure.
+mmlewis warning: A valid lewis structure was successfully generated.
+================================================================================
+  ATOMTYPES and PARAMETERS for molecule: 
+
+================================================================================
+
+ Total charge of the system = -2.0000
+Formal charge of the system = -2.0000
+
+
+Charges
+atom  formal fractional formal 
+1      -1    -0.500  
+2       0     0.000  
+3       0     0.000  
+4       0     0.000  
+5       0    -0.250  
+6       0     0.000  
+7       0     0.000  
+8       0    -0.200  
+9       0    -0.250  
+10      0    -0.200  
+11      0     0.000  
+12     -1    -0.600  
+
+BCI's             index  type   type    bci        assignement info
+ N1      C2          0   479    235     0.1225   empirical rule   NM-C
+ N1      C3          0   479    235     0.1225   empirical rule   NM-C
+ C2      N4          0   235    245    -0.1225   empirical rule   C-NI
+ C2      O5          0   235    244    -0.2225   empirical rule   C-O
+ C3      C7          0   235    190     0.0000   empirical rule   C-CD
+ C3      O9          0   235    233    -0.5000   exact type       C-O
+ N4      C6          0   245    190     0.3897   exact type       NI-CD
+ C6      C7          0   190    190     0.0000   exact type       CD-CD
+ C6      N8          0   190    245    -0.3897   exact type       CD-NI
+ C7      N10         0   190    245    -0.3897   exact type       CD-NI
+ N8      C11         0   245    190     0.3897   exact type       NI-CD
+ N10     C11         0   245    190     0.3897   exact type       NI-CD
+ C11     O12         0   190    420    -0.0850   score  100    CD-OM       ==> CM-OS      
+
+OPLSAA FORCE FIELD TYPE ASSIGNED
+-------------------------------------------------------------------------------
+ atom   type  vdw  symbol    charge   sigma    epsilon  quality   comment 
+-------------------------------------------------------------------------------
+ N1      479  N6   NM      -0.7450   3.4200   0.1700 high   N- in deprotonaged
+ C2      235  C2   C        0.4675   3.7500   0.1050 high   C: C=O in amide or unsaturated amide.    
+ C3      235  C2   C        0.6225   3.7500   0.1050 high   C: C=O in amide or unsaturated amide.    
+ N4      245  N3   NI      -0.5122   3.2800   0.1700 high   imine or hydrazone
+ O5      244  O2   O       -0.4725   2.9600   0.2100 high   O: C=O in unsaturated amide.
+ C6      190  C2   CD       0.7794   3.7500   0.1050 high   general imine carbon
+ C7      190  C2   CD       0.3897   3.7500   0.1050 high   general imine carbon
+ N8      245  N3   NI      -0.9794   3.2800   0.1700 high   imine or hydrazone
+ O9      233  O2   O       -0.7500   2.9600   0.2100 med    O: general C=O in amide.
+ N10     245  N3   NI      -0.9794   3.2800   0.1700 high   imine or hydrazone
+ C11     190  C2   CD       0.8644   3.7500   0.1050 high   general imine carbon
+ O12     420  O9   OM      -0.6850   3.1500   0.2500 high   O  in  R[O-]
+------------------------------------------------------------------------------
+
+
+ Stretch            k            r0    quality         bt        comment
+ N1      C2      495.00000    1.34600   high         0  => 0     NM-C       ==> NM-C      
+ N1      C3      495.00000    1.34600   high         0  => 0     NM-C       ==> NM-C      
+ C2      N4      415.00000    1.36800   high         0  => 0     C-NI       ==> NI-C      
+ C2      O5      570.00000    1.22900   high         0  => 0     C-O        ==> O-C       
+ C3      C7      270.00000    1.48600   high         0  => 0     C-CD       ==> CD-C      
+ C3      O9      570.00000    1.22900   high         0  => 0     C-O        ==> O-C       
+ N4      C6      500.00000    1.26100   high         1  => 1     NI-CD      ==> NI-CD     
+ C6      C7      270.00000    1.47900   high         0  => 0     CD-CD      ==> CD-CD     
+ C6      N8      607.89900    1.43100   high         0  => 0     CD-NI      ==> NI-CD     
+ C7      N10     500.00000    1.26100   high         1  => 1     CD-NI      ==> NI-CD     
+ N8      C11     500.00000    1.26100   high         1  => 1     NI-CD      ==> NI-CD     
+ N10     C11     607.89900    1.43100   high         0  => 0     NI-CD      ==> NI-CD     
+ C11     O12     795.00000    1.23700   high         0  => 0     CD-OM      ==> OM-CD     
+
+ Bending                      k       theta0    quality   at  comment
+ N1      C2      N4        80.00000  114.00000   med      0   NM-C-NI           ==> N?-C-N?          
+ N1      C2      O5        85.00000  128.94100   high     0   NM-C-O            ==> O-C-NM           
+ N1      C3      C7        70.00000  121.56000   high     0   NM-C-CD           ==> CM-C-NM          
+ N1      C3      O9        85.00000  128.94100   high     0   NM-C-O            ==> O-C-NM           
+ C2      N4      C6        80.00000  110.69000   high     0   C-NI-CD           ==> CD-NI-C          
+ C3      N1      C2        75.00000  117.16000   high     0   C-NM-C            ==> C-NM-C           
+ C3      C7      C6        70.00000  118.70000   high     0   C-CD-CD           ==> C-CM-CM          
+ C3      C7      N10       65.00000  123.79500   high     0   C-CD-NI           ==> NI-CD-C          
+ N4      C6      C7        65.00000  122.46400   high     0   NI-CD-CD          ==> NI-CD-CD         
+ N4      C6      N8        75.00000  127.75400   high     0   NI-CD-NI          ==> NI-CD-NI         
+ O5      C2      N4        80.00000  126.08800   high     0   O-C-NI            ==> O-C-NI           
+ C6      C7      N10       65.00000  122.46400   high     0   CD-CD-NI          ==> NI-CD-CD         
+ C6      N8      C11       75.00000  115.59000   high     0   CD-NI-CD          ==> CD-NI-CD         
+ C7      N10     C11       75.00000  115.59000   high     0   CD-NI-CD          ==> CD-NI-CD         
+ N8      C6      C7        65.00000  122.46400   high     0   NI-CD-CD          ==> NI-CD-CD         
+ N8      C11     N10       75.00000  127.75400   high     0   NI-CD-NI          ==> NI-CD-NI         
+ N8      C11     O12       75.00000  134.47000   high     0   NI-CD-OM          ==> OM-CD-NI         
+ O9      C3      C7        80.00000  120.45000   high     0   O-C-CD            ==> O-C-CD           
+ N10     C11     O12       75.00000  134.47000   high     0   NI-CD-OM          ==> OM-CD-NI         
+
+ proper Torsion                     V1      V2      V3      V4    quality  tt  comment
+ N1      C2      N4      C6        0.000   3.000   0.000   0.000    med    0   NM-C-NI-CD           ==> ??-NI-C-??          
+ N1      C3      C7      C6        0.000   3.000   0.000   0.000    med    0   NM-C-CD-CD           ==> ??-CD-C-??          
+ N1      C3      C7      N10       0.000   3.000   0.000   0.000    med    0   NM-C-CD-NI           ==> ??-CD-C-??          
+ C2      N1      C3      C7        0.000   4.900   0.000   0.000    med    0   C-NM-C-CD            ==> ??-NM-C-??          
+ C2      N1      C3      O9        0.000   4.900   0.000   0.000    med    0   C-NM-C-O             ==> ??-NM-C-??          
+ C2      N4      C6      C7        0.000  12.000   0.000   0.000    high   0   C-NI-CD-CD           ==> ??-NI-CD-??         
+ C2      N4      C6      N8        0.000  12.000   0.000   0.000    high   0   C-NI-CD-NI           ==> ??-NI-CD-??         
+ C3      N1      C2      N4        0.000   4.900   0.000   0.000    med    0   C-NM-C-NI            ==> ??-NM-C-??          
+ C3      N1      C2      O5        0.000   4.900   0.000   0.000    med    0   C-NM-C-O             ==> ??-NM-C-??          
+ C3      C7      N10     C11       0.000  12.000   0.000   0.000    high   0   C-CD-NI-CD           ==> ??-NI-CD-??         
+ N4      C6      C7      C3        0.000  14.000   0.000   0.000    high   0   NI-CD-CD-C           ==> ??-CM-CM-??         
+ N4      C6      C7      N10       0.000  14.000   0.000   0.000    high   0   NI-CD-CD-NI          ==> ??-CM-CM-??         
+ N4      C6      N8      C11       0.001   4.000   0.000   0.000    med    1   NI-CD-NI-CD          ==> ??-NI-CD-??         
+ O5      C2      N4      C6        0.000   6.186   0.000   0.000    high   0   O-C-NI-CD            ==> CD-NI-C-O           
+ C6      C7      N10     C11       0.000  12.000   0.000   0.000    high   0   CD-CD-NI-CD          ==> ??-NI-CD-??         
+ C6      N8      C11     N10       0.000  12.000   0.000   0.000    high   0   CD-NI-CD-NI          ==> ??-NI-CD-??         
+ C6      N8      C11     O12       0.000  12.000   0.000   0.000    high   0   CD-NI-CD-OM          ==> ??-NI-CD-??         
+ C7      C6      N8      C11       0.001   4.000   0.000   0.000    med    1   CD-CD-NI-CD          ==> ??-NI-CD-??         
+ C7      N10     C11     N8        0.001   4.000   0.000   0.000    med    1   CD-NI-CD-NI          ==> ??-NI-CD-??         
+ C7      N10     C11     O12       0.001   4.000   0.000   0.000    med    1   CD-NI-CD-OM          ==> ??-NI-CD-??         
+ N8      C6      C7      C3        0.000  14.000   0.000   0.000    high   0   NI-CD-CD-C           ==> ??-CM-CM-??         
+ N8      C6      C7      N10       0.000  14.000   0.000   0.000    high   0   NI-CD-CD-NI          ==> ??-CM-CM-??         
+ O9      C3      C7      C6        0.000   2.000   0.000   0.000    high   0   O-C-CD-CD            ==> CM-CD-C-O           
+ O9      C3      C7      N10       0.000   2.000   0.000   0.000    high   0   O-C-CD-NI            ==> NI-CD-C-O           
+
+ improper Torsion                   V2    quality  comment
+ N1      N4      C2      O5       21.000   high   carbonyl and analogs
+ C7      N1      C3      O9       21.000   high   carbonyl and analogs
+ N8      C7      C6      N4       21.000   high   trigonal carbon in ami-,guani-dinium
+ C6      C3      C7      N10      21.000   high   carbonyl and analogs
+ N10     O12     C11     N8       21.000   high   carbonyl and analogs
+
+

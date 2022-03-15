@@ -1,0 +1,7 @@
+
+- Convert OPLS, Charmm, Amber torsion functional types to RB torsion for Gromacs
+- Check if need read Desmond files or ffld_server has an identical functionality?
+
+FIX BUG: does not store global FF files for Charmm FF to local topology DB
+
+

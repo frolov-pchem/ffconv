@@ -1,0 +1,13 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+# From AMBER
+Mol,FF = ReadAmberTopologyFile(moltopfn)
+
+# To RISMMOL
+Mol.LoadCoordinatesFromPdb(molcoorfn)
+WriteRISMMOLMoleculeTopFile(molname+'.rismmol',Mol)
+    
+ 

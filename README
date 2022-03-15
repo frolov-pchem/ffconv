@@ -1,0 +1,119 @@
+### Written by Andrey I. Frolov, Institute of Solution Chemistry RAS, Russia. March 2012.
+### Last modified: 04 Feb 2019.
+
+VERSION 1.5 NOTES
+
+- updated documentation how to use ffld_server with 2005 parameters
+- converstion to Amber format now prints only the title of the molecule in TILTE field omitting unnecessary info.
+
+
+DESCRIPTION
+
+ffconv.py is a python program which performs conversion between different file formats of classical force field for small molecules. Supplementary scripts check if the conversion was correct by comparing energies calculated before and after conversion. 
+
+
+USAGE
+
+0) MIND! you need to have Python 2 and Numpy installed. Python 3 is not supported!
+1) set FFCONVPATH variable and PATH to ffconv.py: (in Bash: export FFCONVPATH=/path/to/ffconv; export PATH=$PATH:$FFCONVPATH. Note: to make your shell do it automatically add these commands to your $HOME/.bashrc file) 
+2) set PYTHONPATH to python module FactorToConvertUnits.py (in Bash: export PYTHONPATH=$HOME/scripts/unitconv). Last version of unitconv can be downloaded from frolov-pchem.wikispaces.com. 
+
+# I have this in my $HOME/.bashrc
+export FFCONVPATH=$HOME/Distr/ffconv
+export PATH=$PATH:$FFCONVPATH
+export PATH=$PATH:$FFCONVPATH/scripts
+export PYTHONPATH=$PYTHONPATH:$HOME/Distr/unitconv
+export PATH=$PATH:$HOME/Distr/unitconv
+
+
+3) generate topology files for your molecule by available tools. See GEN_TOPOLOGY_INFO file for more information.
+4) run the ffconv.py providing the info (molecule name, FF name, topology files, etc.) as cmdline keys  OR  provide custom file with the commands to ffconv.py. The default ffconv cmd files are stores in the root folder of ffconv. In a custom cmd file one can use any python commands, and use the build in functions (methods) of the ffconv module (stored in all *.py file in the root folder of ffconv).
+5) check the conversion by comparing potential energies of molecule for given configurations before and after conversion of files by executing energy evaluation in programs, which can load topology in the initial and output formats. To test conversion, please, read the help for $FFCONVPATH/scripts/check_conversion.sh -h. You would also need some common scripts I use: FillVariablesToTemplate.sh, bk.sh ... (see frolov-pchem.wikispaces.com)
+
+
+TOPOLOGY GENERATION
+
+Read the file GEN_TOPOLOGY_INFO to know how to generate topologies from coordinates from different programs.
+
+
+SUPPORTED FORMATS
+
+Now ffconv can do the following:
+
+to read:  (Schrodinger) ffld_server output, Amber topology file, CHARMM force field file, CHARMM molecule stream file, PDB coordinate file
+to write: Gromacs topology itp files, RISM-MOL topology file
+to test conversion of: ffld_server (run ffld_server), Amber (run NAMD... yes, NAMD because AMBER is not free and AmberTools utilities (e.g. NAB) not able to understand all the fields of Amber topology file), Charmm (run Charmm)
+
+
+EXAMPLE USAGES
+
+Please, see files EXAMPLE_USAGE in folders EXAMPLE_AMBER, EXAMPLE_FFLDSERVER, EXAMPLE_CHARMM.
+
+
+
+FFCONV FOLDER CONTENT
+
+ - Code files
+    ffconv.py           
+    molecule_class.py
+    elements.py
+    func_amber_io.py
+    func_charmm_io.py
+    func_ffldserver_io.py
+    func_gromacs_io.py
+    func_namd_io.py
+    func_rismmol_io.py
+
+ - Default commands for ffconv
+    ffconv_AMBER_to_GROMACS.runcmd
+    ffconv_AMBER_to_RISMMOL.runcmd
+    ffconv_CHARMM_to_AMBER.runcmd
+    ffconv_CHARMM_to_GROMACS.runcmd
+    ffconv_CHARMM_to_RISMMOL.runcmd
+    ffconv_FFLDSERVER_to_AMBER.runcmd
+    ffconv_FFLDSERVER_to_GROMACS.runcmd
+    ffconv_FFLDSERVER_to_RISMMOL.runcmd
+
+ - Documentation
+    README
+    GEN_TOPOLOGY_INFO
+    LOCAL_TOPOLOGY_INFO
+    TODO_PERSPECTIVES
+    LICENSE
+    NOTICE
+
+ - Folders with templates and scripts
+    scripts
+    templates
+    top - local topology database
+
+ - Real life examples (see file EXAMPLE_USAGE inside the folders)
+    EXAMPLE_AMBER
+    EXAMPLE_CHARMM
+    EXAMPLE_FFLDSERVER
+
+
+KNOWN PROBLEMS
+
+- does not store glabal FF files to local database 
+
+
+FIXED BUGS
+
+- FIXED: issue with conversion of FFLD_SERVER topology to GROMACS for solutes with nitrogen: was observed that for some nitrogen-containing compounds the conversion check fails - nonbonded LJ energy are different before and after conversion.
+- FIXED: templates and executables changed to new Gromacs format (versions 5+) for conversion checks.
+- FIXED: converstion to Amber format now prints only the title of the molecule in TILTE field omitting unnecessary info.
+
+
+OTHER FF CONVERSION TOOLS
+
+amb2gmx.pl 
+charmm_to_gromacs
+
+
+HOW TO ACKNOWLEDGE
+
+Please, cite the following publication if you use ffconv.py for your research:
+Frolov A. I., Kiselev M. G. “Prediction of Co-solvent Effect on Solvation Free Energies and Solubilities of Organic Compounds in Supercritical Carbon Dioxide Based on Fully-atomistic Molecular Simulations”, J. Phys. Chem. B 2014
+
+

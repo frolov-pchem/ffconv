@@ -1,0 +1,15 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+# FF
+FF=ReadCharmmForceFieldFile(FFfn)
+
+# Molecule
+Mol = ReadCharmmStreamMolecularTopologyFile(moltopfn)
+Mol.FillAtomsFF(FF)
+Mol.LoadCoordinatesFromPdb(molcoorfn)
+
+WriteRISMMOLMoleculeTopFile(molname+'.rismmol',Mol)
+

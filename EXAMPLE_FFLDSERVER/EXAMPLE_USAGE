@@ -1,0 +1,22 @@
+
+#Examples to use the script
+
+
+### to RISMOL
+$FFCONVPATH/ffconv.py --fromprog FFLDSERVER --toprog RISMMOL --ffname oplsaa --moltopfn paracetamol.ffld --molcoorfn paracetamol.pdb --ffconvpath $FFCONVPATH
+
+
+### to AMBER (3D-RISM single point calcuations ONLY!)
+# 1) convert
+$FFCONVPATH/ffconv.py --fromprog FFLDSERVER --toprog AMBER --ffname oplsaa --moltopfn paracetamol.ffld --ffconvpath $FFCONVPATH
+# 2) check
+$FFCONVPATH/scripts/check_conversion.sh --mol paracetamol --fromprog FFLDSERVER --toprog AMBER --ffconvpath $FFCONVPATH --confpath `pwd` --compareonly E_ELEC,E_VDW --ldbstore1 no --ldbstore2 yes --dbpath $FFCONVPATH/top --ffname1 oplsaa --ffname2 oplsaa_nonbond_only 
+
+
+### to GROMACS
+# 1) convert
+$FFCONVPATH/ffconv.py --fromprog FFLDSERVER --toprog GROMACS --ffname oplsaa --moltopfn paracetamol.ffld --ffconvpath $FFCONVPATH
+# 2) check
+$FFCONVPATH/scripts/check_conversion.sh --mol paracetamol --fromprog FFLDSERVER --toprog GROMACS --confpath `pwd` --ldbstore1 yes --ldbstore2 yes  --dbpath $FFCONVPATH/top --ffname oplsaa
+
+

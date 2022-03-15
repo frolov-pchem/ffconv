@@ -1,0 +1,13 @@
+
+### Examples to use ffconv
+
+### To RISM-MOL
+$FFCONVPATH/ffconv.py --fromprog AMBER --toprog RISMMOL --ffname oplsaa --moltopfn paracetamol.top --molcoorfn paracetamol.pdb --ffconvpath $FFCONVPATH
+
+### to GROMACS
+# 1) convert
+$FFCONVPATH/ffconv.py --fromprog AMBER --toprog GROMACS --ffname gaff --moltopfn paracetamol.top --molcoorfn paracetamol.pdb --ffconvpath $FFCONVPATH
+# 2) check
+$FFCONVPATH/scripts/check_conversion.sh --mol paracetamol --fromprog AMBER --toprog GROMACS --confpath `pwd` --ldbstore1 yes   --ldbstore2 yes --dbpath $FFCONVPATH/top --ffname gaff
+
+

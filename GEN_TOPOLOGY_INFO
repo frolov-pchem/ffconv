@@ -1,0 +1,17 @@
+### Written by Andrey I. Frolov, Institute of Solution Chemistry RAS, Russia. March 2012.
+### Last modified: May 2014.
+
+The following tools can assign force field parameters for an arbitrary organic molecule using a PDB coordinate file:
+
+1) Assign OPLS-AA (2005) parameters with Schrodinger ffld_server - part of Maestro, free for academia (http://www.schrodinger.com/downloadcenter):
+to create topology with ffld_server run smth like:
+$SCHRODINGER/utilities/ffld_server -ipdb paracetamol.pdb -print_parameters -version 2005  > paracetamol.ffld
+
+2) Assign General Amber Force Filed (GAFF):
+You can use "antechamber" and "tleap" programs of AmberTools (ambermd.org). The pipeline for this given in: 
+http://compchemmpi.wikispaces.com/Scripts#GenAmberTop
+
+3) Assign Charmm Generalized Force Field (CGenFF):
+use online service: paramchem.org
+OR run the latest CHARMM version (I guess charmm 36 allows to assign CGenFF)
+

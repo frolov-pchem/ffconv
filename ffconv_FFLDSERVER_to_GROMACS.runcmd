@@ -1,0 +1,19 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+# From FFLDSERVER
+Mol = ReadFFLDServerOutput(moltopfn)
+FillMasses(Mol)
+Mol.GenPairsFromBondConnectivity()
+
+# To GROMACS
+Mol.DihedralsFourier2RB()
+
+FF=Mol.GenFFFromMolecule()
+#WriteGromacsFFFile(molname+'_AT.itp',FF,lDef='yes',lBonded='yes')
+WriteGromacsFFFile(molname+'_AT.itp',FF,lDef='yes',lBonded='no')
+WriteGromacsMoleculeITPFile(molname+'.itp',Mol,Style='Explicit')
+
+

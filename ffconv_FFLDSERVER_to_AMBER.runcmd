@@ -1,0 +1,16 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+# From FFLDSERVER
+Mol = ReadFFLDServerOutput(moltopfn)
+FillMasses(Mol)
+Mol.GenPairsFromBondConnectivity()
+
+# To AMBER
+FF=Mol.GenFFFromMolecule()
+Mol.FFName += '_nonbond_only'
+WriteAmberMoleculeTopFile(molname+'.top', Mol, FF, lBonded='no' )
+
+

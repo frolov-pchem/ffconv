@@ -1,0 +1,26 @@
+HETATM    1  N1  URC A 302      10.430 -64.692 -19.464  1.00 24.03           N
+HETATM    2  C2  URC A 302      10.019 -65.841 -20.119  1.00 12.43           C
+HETATM    3  C6  URC A 302      10.448 -63.388 -19.878  1.00 18.18           C
+HETATM    4  N3  URC A 302       9.488 -65.637 -21.389  1.00 14.95           N
+HETATM    5  O11 URC A 302      10.056 -66.856 -19.608  1.00 15.87           O
+HETATM    6  C4  URC A 302       9.533 -64.415 -21.878  1.00 13.58           C
+HETATM    7  C5  URC A 302       9.953 -63.261 -21.227  1.00 20.11           C
+HETATM    8  N9  URC A 302       9.173 -63.989 -23.136  1.00 22.34           N
+HETATM    9  O13 URC A 302      10.860 -62.476 -19.177  1.00 26.54           O
+HETATM   10  N7  URC A 302       9.794 -62.181 -21.920  1.00 17.51           N
+HETATM   11  C8  URC A 302       9.321 -62.603 -23.192  1.00 16.03           C
+HETATM   12  O24 URC A 302       9.052 -61.820 -24.133  1.00 17.67           O
+ENDMDL
+CONECT    2    1    4    5
+CONECT    6    4    7    8
+CONECT    7    3    6   10
+CONECT    3    1    7    9
+CONECT   11    8   10   12
+CONECT    1    2    3
+CONECT    4    2    6
+CONECT   10    7   11
+CONECT    8    6   11
+CONECT    5    2
+CONECT    9    3
+CONECT   12   11
+END

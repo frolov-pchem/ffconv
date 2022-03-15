@@ -1,0 +1,194 @@
+mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  1 2 9 10 12 14 17 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+mmlewis warning: A valid lewis structure was successfully generated.
+================================================================================
+  ATOMTYPES and PARAMETERS for molecule: 
+
+================================================================================
+
+ Total charge of the system =  0.0000
+Formal charge of the system =  0.0000
+
+
+Charges
+atom  formal fractional formal 
+1       0     0.000  
+2       0     0.000  
+3       0     0.000  
+4       0     0.000  
+5       0     0.000  
+6       0     0.000  
+7       0     0.000  
+8       0     0.000  
+9       0     0.000  
+10      0     0.000  
+11      0     0.000  
+12      0     0.000  
+13      0     0.000  
+14      0     0.000  
+15      0     0.000  
+16      0     0.000  
+17      0     0.000  
+18      0     0.000  
+19      0     0.000  
+20      0     0.000  
+
+BCI's             index  type   type    bci        assignement info
+ O1      C2          0   233    235     0.5000   exact type       O-C
+ C2      C3          0   235    135    -0.0000   exact type       C-CT
+ C2      N7          0   235    238     0.0000   exact type       C-N
+ C3      H4          0   135    140     0.0600   exact type       CT-HC
+ C3      H5          0   135    140     0.0600   exact type       CT-HC
+ C3      H6          0   135    140     0.0600   exact type       CT-HC
+ N7      H8          0   238    240     0.3000   exact type       N-H
+ N7      C9          0   238    145     0.0850   exact type       N-CA
+ C9      C10         0   145    145     0.0000   exact type       CA-CA
+ C9      C19         0   145    145     0.0000   exact type       CA-CA
+ C10     H11         0   145    146     0.1150   exact type       CA-HA
+ C10     C12         0   145    145     0.0000   exact type       CA-CA
+ C12     H13         0   145    146     0.1150   exact type       CA-HA
+ C12     C14         0   145    145     0.0000   exact type       CA-CA
+ C14     O15         0   145    167    -0.1500   exact type       CA-OH
+ C14     C17         0   145    145     0.0000   exact type       CA-CA
+ O15     H16         0   167    240     0.4350   exact type       OH-HO
+ C17     H18         0   145    146     0.1150   exact type       CA-HA
+ C17     C19         0   145    145     0.0000   exact type       CA-CA
+ C19     H20         0   145    146     0.1150   exact type       CA-HA
+
+OPLSAA FORCE FIELD TYPE ASSIGNED
+-------------------------------------------------------------------------------
+ atom   type  vdw  symbol    charge   sigma    epsilon  quality   comment 
+-------------------------------------------------------------------------------
+ O1      233  O2   O       -0.5000   2.9600   0.2100 high   O: C=O in amide.
+ C2      235  C2   C        0.5000   3.7500   0.1050 high   C: C=O in amide or unsaturated amide.    
+ C3      135  C1   CT      -0.1800   3.5000   0.0660 high   C: alkanes
+ H4      140  H1   HC       0.0600   2.5000   0.0300 high   H on C-alpha in amide
+ H5      140  H1   HC       0.0600   2.5000   0.0300 high   H on C-alpha in amide
+ H6      140  H1   HC       0.0600   2.5000   0.0300 high   H on C-alpha in amide
+ N7      238  N1   N       -0.3850   3.2500   0.1700 high   N: secondary amide
+ H8      240  H8   H        0.3000   0.5000   0.0300 high   H on neutral N
+ C9      145  C4   CA       0.0850   3.5500   0.0700 high   Benzene C - 12 site JACS,112,4768-90
+ C10     145  C4   CA      -0.1150   3.5500   0.0700 high   Benzene C - 12 site JACS,112,4768-90
+ H11     146  H6   HA       0.1150   2.4200   0.0300 high   Benzene H - 12 site JACS,112,4768-90
+ C12     145  C4   CA      -0.1150   3.5500   0.0700 high   Benzene C - 12 site JACS,112,4768-90
+ H13     146  H6   HA       0.1150   2.4200   0.0300 high   Benzene H - 12 site JACS,112,4768-90
+ C14     145  C4   CA       0.1500   3.5500   0.0700 high   Benzene C - 12 site JACS,112,4768-90
+ O15     167  O6   OH      -0.5850   3.0700   0.1700 high   O: phenol 
+ H16     240  H8   HO       0.4350   0.5000   0.0300 high   H(O): alcohols
+ C17     145  C4   CA      -0.1150   3.5500   0.0700 high   Benzene C - 12 site JACS,112,4768-90
+ H18     146  H6   HA       0.1150   2.4200   0.0300 high   Benzene H - 12 site JACS,112,4768-90
+ C19     145  C4   CA      -0.1150   3.5500   0.0700 high   Benzene C - 12 site JACS,112,4768-90
+ H20     146  H6   HA       0.1150   2.4200   0.0300 high   Benzene H - 12 site JACS,112,4768-90
+------------------------------------------------------------------------------
+
+
+ Stretch            k            r0    quality         bt        comment
+ O1      C2      570.00000    1.22900   high         0  => 0     O-C        ==> O-C       
+ C2      C3      317.00000    1.52200   high         0  => 0     C-CT       ==> CT-C      
+ C2      N7      490.00000    1.33500   high         0  => 0     C-N        ==> N-C       
+ C3      H4      340.00000    1.09000   high         0  => 0     CT-HC      ==> HC-CT     
+ C3      H5      340.00000    1.09000   high         0  => 0     CT-HC      ==> HC-CT     
+ C3      H6      340.00000    1.09000   high         0  => 0     CT-HC      ==> HC-CT     
+ N7      H8      434.00000    1.01000   high         0  => 0     N-H        ==> N-H       
+ N7      C9      360.00000    1.40400   high         0  => 0     N-CA       ==> N-CA      
+ C9      C10     469.00000    1.40000   high         0  => 0     CA-CA      ==> CA-CA     
+ C9      C19     469.00000    1.40000   high         0  => 0     CA-CA      ==> CA-CA     
+ C10     H11     367.00000    1.08000   high         0  => 0     CA-HA      ==> HA-CA     
+ C10     C12     469.00000    1.40000   high         0  => 0     CA-CA      ==> CA-CA     
+ C12     H13     367.00000    1.08000   high         0  => 0     CA-HA      ==> HA-CA     
+ C12     C14     469.00000    1.40000   high         0  => 0     CA-CA      ==> CA-CA     
+ C14     O15     450.00000    1.36400   high         0  => 0     CA-OH      ==> OH-CA     
+ C14     C17     469.00000    1.40000   high         0  => 0     CA-CA      ==> CA-CA     
+ O15     H16     553.00000    0.94500   high         0  => 0     OH-HO      ==> OH-HO     
+ C17     H18     367.00000    1.08000   high         0  => 0     CA-HA      ==> HA-CA     
+ C17     C19     469.00000    1.40000   high         0  => 0     CA-CA      ==> CA-CA     
+ C19     H20     367.00000    1.08000   high         0  => 0     CA-HA      ==> HA-CA     
+
+ Bending                      k       theta0    quality   at  comment
+ O1      C2      C3        80.00000  120.40000   high     0   O-C-CT            ==> O-C-CT           
+ O1      C2      N7        80.00000  122.90000   high     0   O-C-N             ==> O-C-N            
+ C2      C3      H4        35.00000  109.50000   high     0   C-CT-HC           ==> HC-CT-C          
+ C2      C3      H5        35.00000  109.50000   high     0   C-CT-HC           ==> HC-CT-C          
+ C2      C3      H6        35.00000  109.50000   high     0   C-CT-HC           ==> HC-CT-C          
+ C2      N7      H8        35.00000  119.80000   high     0   C-N-H             ==> H-N-C            
+ C2      N7      C9        65.00000  121.96500   high     0   C-N-CA            ==> CA-N-C           
+ H5      C3      H4        33.00000  107.80000   high     0   HC-CT-HC          ==> HC-CT-HC         
+ H6      C3      H4        33.00000  107.80000   high     0   HC-CT-HC          ==> HC-CT-HC         
+ H6      C3      H5        33.00000  107.80000   high     0   HC-CT-HC          ==> HC-CT-HC         
+ N7      C2      C3        70.00000  116.60000   high     0   N-C-CT            ==> N-C-CT           
+ N7      C9      C10       70.00000  119.01900   high     0   N-CA-CA           ==> N-CA-CA          
+ N7      C9      C19       70.00000  119.01900   high     0   N-CA-CA           ==> N-CA-CA          
+ C9      N7      H8        45.00000  118.23600   high     0   CA-N-H            ==> H-N-CA           
+ C9      C10     H11       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+ C9      C10     C12       63.00000  120.00000   high     0   CA-CA-CA          ==> CA-CA-CA         
+ C9      C19     C17       63.00000  120.00000   high     0   CA-CA-CA          ==> CA-CA-CA         
+ C9      C19     H20       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+ C10     C12     H13       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+ C10     C12     C14       63.00000  120.00000   high     0   CA-CA-CA          ==> CA-CA-CA         
+ C12     C10     H11       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+ C12     C14     O15       70.00000  120.00000   high     0   CA-CA-OH          ==> OH-CA-CA         
+ C12     C14     C17       63.00000  120.00000   high     0   CA-CA-CA          ==> CA-CA-CA         
+ C14     C12     H13       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+ C14     O15     H16       35.00000  113.00000   high     0   CA-OH-HO          ==> HO-OH-CA         
+ C14     C17     H18       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+ C14     C17     C19       63.00000  120.00000   high     0   CA-CA-CA          ==> CA-CA-CA         
+ C17     C14     O15       70.00000  120.00000   high     0   CA-CA-OH          ==> OH-CA-CA         
+ C17     C19     H20       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+ C19     C9      C10       63.00000  120.00000   high     0   CA-CA-CA          ==> CA-CA-CA         
+ C19     C17     H18       35.00000  120.00000   high     0   CA-CA-HA          ==> HA-CA-CA         
+
+ proper Torsion                     V1      V2      V3      V4    quality  tt  comment
+ O1      C2      C3      H4        0.000   0.000   0.000   0.000    high   0   O-C-CT-HC            ==> HC-CT-C-O           
+ O1      C2      C3      H5        0.000   0.000   0.000   0.000    high   0   O-C-CT-HC            ==> HC-CT-C-O           
+ O1      C2      C3      H6        0.000   0.000   0.000   0.000    high   0   O-C-CT-HC            ==> HC-CT-C-O           
+ O1      C2      N7      H8        0.000   4.900   0.000   0.000    high   0   O-C-N-H              ==> H-N-C-O             
+ O1      C2      N7      C9        0.000   0.080   0.000   0.000    high   0   O-C-N-CA             ==> CA-N-C-O            
+ C2      N7      C9      C10       2.002   1.701   0.000   0.000    high   0   C-N-CA-CA            ==> C-N-CA-CA           
+ C2      N7      C9      C19       2.002   1.701   0.000   0.000    high   0   C-N-CA-CA            ==> C-N-CA-CA           
+ C3      C2      N7      H8        0.000   4.900   0.000   0.000    high   0   CT-C-N-H             ==> H-N-C-CT            
+ C3      C2      N7      C9        1.520   8.232   0.000   0.000    high   0   CT-C-N-CA            ==> CA-N-C-C?           
+ N7      C2      C3      H4        0.000   0.000   0.000   0.000    high   0   N-C-CT-HC            ==> HC-CT-C-N           
+ N7      C2      C3      H5        0.000   0.000   0.000   0.000    high   0   N-C-CT-HC            ==> HC-CT-C-N           
+ N7      C2      C3      H6        0.000   0.000   0.000   0.000    high   0   N-C-CT-HC            ==> HC-CT-C-N           
+ N7      C9      C10     H11       0.000   7.250   0.000   0.000    high   0   N-CA-CA-HA           ==> ??-CA-CA-??         
+ N7      C9      C10     C12       0.000   7.250   0.000   0.000    high   0   N-CA-CA-CA           ==> ??-CA-CA-??         
+ N7      C9      C19     C17       0.000   7.250   0.000   0.000    high   0   N-CA-CA-CA           ==> ??-CA-CA-??         
+ N7      C9      C19     H20       0.000   7.250   0.000   0.000    high   0   N-CA-CA-HA           ==> ??-CA-CA-??         
+ H8      N7      C9      C10       0.000   1.956   0.000   0.000    high   0   H-N-CA-CA            ==> H-N-CA-CA           
+ H8      N7      C9      C19       0.000   1.956   0.000   0.000    high   0   H-N-CA-CA            ==> H-N-CA-CA           
+ C9      C10     C12     H13       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-HA          ==> HA-CA-CA-CA         
+ C9      C10     C12     C14       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-CA          ==> CA-CA-CA-CA         
+ C10     C9      C19     C17       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-CA          ==> CA-CA-CA-CA         
+ C10     C9      C19     H20       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-HA          ==> HA-CA-CA-CA         
+ C10     C12     C14     O15       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-OH          ==> OH-CA-CA-CA         
+ C10     C12     C14     C17       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-CA          ==> CA-CA-CA-CA         
+ H11     C10     C12     H13       0.000   7.250   0.000   0.000    high   0   HA-CA-CA-HA          ==> HA-CA-CA-HA         
+ H11     C10     C12     C14       0.000   7.250   0.000   0.000    high   0   HA-CA-CA-CA          ==> HA-CA-CA-CA         
+ C12     C14     O15     H16       0.000   1.682   0.000   0.000    high   0   CA-CA-OH-HO          ==> HO-OH-CA-CA         
+ C12     C14     C17     H18       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-HA          ==> HA-CA-CA-CA         
+ C12     C14     C17     C19       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-CA          ==> CA-CA-CA-CA         
+ H13     C12     C14     O15       0.000   7.250   0.000   0.000    high   0   HA-CA-CA-OH          ==> OH-CA-CA-HA         
+ H13     C12     C14     C17       0.000   7.250   0.000   0.000    high   0   HA-CA-CA-CA          ==> HA-CA-CA-CA         
+ C14     C17     C19     C9        0.000   7.250   0.000   0.000    high   0   CA-CA-CA-CA          ==> CA-CA-CA-CA         
+ C14     C17     C19     H20       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-HA          ==> HA-CA-CA-CA         
+ O15     C14     C17     H18       0.000   7.250   0.000   0.000    high   0   OH-CA-CA-HA          ==> OH-CA-CA-HA         
+ O15     C14     C17     C19       0.000   7.250   0.000   0.000    high   0   OH-CA-CA-CA          ==> OH-CA-CA-CA         
+ C17     C14     O15     H16       0.000   1.682   0.000   0.000    high   0   CA-CA-OH-HO          ==> HO-OH-CA-CA         
+ H18     C17     C19     C9        0.000   7.250   0.000   0.000    high   0   HA-CA-CA-CA          ==> HA-CA-CA-CA         
+ H18     C17     C19     H20       0.000   7.250   0.000   0.000    high   0   HA-CA-CA-HA          ==> HA-CA-CA-HA         
+ C19     C9      C10     H11       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-HA          ==> HA-CA-CA-CA         
+ C19     C9      C10     C12       0.000   7.250   0.000   0.000    high   0   CA-CA-CA-CA          ==> CA-CA-CA-CA         
+
+ improper Torsion                   V2    quality  comment
+ C3      N7      C2      O1       21.000   high   carbonyl and analogs
+ C9      C2      N7      H8        2.000   high   amide, amidine-,guanidinium
+ C10     C19     C9      N7        8.000   high   aromatic atom 
+ H11     C12     C10     C9        2.200   high   aromatic atom 
+ H13     C14     C12     C10       2.200   high   aromatic atom 
+ O15     C17     C14     C12       8.000   high   aromatic atom 
+ H18     C19     C17     C14       2.200   high   aromatic atom 
+ C17     H20     C19     C9        2.200   high   aromatic atom 
+
+

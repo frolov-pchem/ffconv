@@ -1,0 +1,19 @@
+
+#Examples to use the script
+
+### To GROMACS
+# 1) convert
+$FFCONVPATH/ffconv.py --fromprog CHARMM --toprog GROMACS --ffname cgenff2b7 --moltopfn paracetamol.str --ffconvpath $FFCONVPATH --FFfn ~/top/CHARMM/cgenff2b7/par_all36_cgenff.prm
+# 2) check
+$FFCONVPATH/scripts/check_conversion.sh --mol paracetamol --fromprog CHARMM --toprog GROMACS --ffconvpath $FFCONVPATH --confpath `pwd`  --dbpath $FFCONVPATH/top --ffname cgenff2b7 --charmm-ff-prm ~/top/CHARMM/cgenff2b7/par_all36_cgenff.prm --charmm-ff-rtf ~/top/CHARMM/cgenff2b7/top_all36_cgenff.rtf --gmx-ff-itp `pwd`/par_all36_cgenff.prm.itp  --ldbstore1 yes  --ldbstore2 yes
+
+
+### EXAMPLE CONVERSION from CHARMM to AMBER (ONLY SUITED FOR SINGLE POINT 3D_RISM CALCULATIONS: ONLY NONBONDED PARAMETERS PRESENT!)
+# 1) convert
+$FFCONVPATH/ffconv.py --fromprog CHARMM --toprog AMBER --ffname cgenff2b7 --moltopfn paracetamol.str --ffconvpath $FFCONVPATH --FFfn par_all36_cgenff_MOD_no_p14.prm
+
+# 2) check conversion
+# note --ldbstore yes: if conversion succeed - store the data to local database 
+# make sure --dppath points to existing directory
+$FFCONVPATH/scripts/check_conversion.sh --mol paracetamol --fromprog CHARMM --toprog AMBER --ffconvpath $FFCONVPATH --confpath `pwd` --compareonly E_ELEC,E_VDW --ldbstore2 yes --dbpath $FFCONVPATH/top --ffname1 oplsaa --ffname2 oplsaa_nonbond_only  --charmm-ff-prm `pwd`/par_all36_cgenff_MOD_no_p14.prm --charmm-ff-rtf `pwd`/top_all36_cgenff.rtf
+

@@ -1,0 +1,22 @@
+
+#######################################
+####### PROGRAM START #################
+#######################################
+
+### From CHARMM
+# FF
+FF=ReadCharmmForceFieldFile(FFfn)
+FF.GenPairParamFromAtomTypeParam()
+
+# Molecule and extra FF
+Mol,FFextra = ReadCharmmStreamMolecularTopologyFile(moltopfn)
+Mol.GenPairsFromBondConnectivity()
+FillMasses(Mol)
+
+### To AMBER (single point 3D RISM only!)
+
+FF.addFF(FFextra)
+
+Mol.FFName += '_nonbond_only'
+WriteAmberMoleculeTopFile(molname+'.top', Mol, FF, lBonded='no' )
+
